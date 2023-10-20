@@ -1,7 +1,7 @@
 {
   "name": "nitro-deploy-github-action",
   "type": "module",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "packageManager": "pnpm@8.8.0",
   "description": "add description",
   "author": "add author",
