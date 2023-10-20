@@ -1,5 +1,5 @@
 {
-  "name": "ts-bundle-template",
+  "name": "nitro-deploy-github-action",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@8.8.0",
@@ -7,12 +7,12 @@
   "author": "add author",
   "license": "MIT",
   "funding": "https://github.com/sponsors/productdevbook",
-  "homepage": "https://github.com/productdevbookcom/ts-bundle-template",
+  "homepage": "https://github.com/nitro-deploy/nitro-deploy-github-action",
   "repository": {
     "type": "git",
-    "url": "https://github.com/productdevbookcom/ts-bundle-template.git"
+    "url": "https://github.com/nitro-deploy/nitro-deploy-github-action.git"
   },
-  "bugs": "https://github.com/productdevbookcom/ts-bundle-template/issues",
+  "bugs": "https://github.com/nitro-deploy/nitro-deploy-github-action/issues",
   "keywords": [
     "add keywords"
   ],
@@ -29,13 +29,13 @@
     "dist"
   ],
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
     "prepublishOnly": "pnpm run build",
-    "release": "pnpm build && bumpp --commit --push --tag && pnpm publish",
+    "release": "pnpm build && bumpp --commit --push --tag",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "vitest",
