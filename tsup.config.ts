@@ -14,5 +14,6 @@ export default <Options>{
   clean: true,
   dts: true,
   minify: true,
-  external,
+  noExternal: external,
+  skipNodeModulesBundle: false,
 }
