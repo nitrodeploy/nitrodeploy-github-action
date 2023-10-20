@@ -45,7 +45,8 @@
   },
   "dependencies": {
     "@actions/core": "^1.10.1",
-    "@actions/github": "^6.0.0"
+    "@actions/github": "^6.0.0",
+    "nitro-deploy": "^0.1.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "1.0.0-beta.19",
