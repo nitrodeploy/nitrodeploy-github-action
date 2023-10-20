@@ -45,7 +45,7 @@ importers:
 
   playground:
     devDependencies:
-      ts-bundle-template:
+      nitro-deploy-github-action:
         specifier: workspace:^
         version: link:..
 

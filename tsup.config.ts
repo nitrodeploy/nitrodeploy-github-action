@@ -14,5 +14,5 @@ export default <Options>{
   clean: true,
   dts: true,
   minify: true,
-  noExternal: external,
+  external,
 }
