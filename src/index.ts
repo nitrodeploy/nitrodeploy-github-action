@@ -1,13 +1,17 @@
 import { getInput } from '@actions/core'
 
-import { uploadFile } from 'nitro-deploy/upload'
+import { uploadFile } from 'nitrodeploy/upload'
 
-const token = getInput('nitro_deploy_token')
-const buildCommand = getInput('nitro_deploy_build_command')
-const exportFolder = getInput('nitro_deploy_export_folder')
+const token = getInput('TOKEN')
+const buildCommand = getInput('BUILD_COMMAND')
+const exportFolder = getInput('EXPORT_FOLDER')
+const tag = getInput('TAG')
+const autobuild = getInput('AUTO_BUILD')
 
 await uploadFile({
   token,
   buildCommand: buildCommand || 'npm run build',
   exportFolder: exportFolder || '.output',
+  isBuild: autobuild === 'true',
+  tag: tag || 'github',
 })

@@ -7,17 +7,25 @@ branding:
   icon: cloud-lightning
 
 inputs:
-  nitro_deploy_token:
+  TOKEN:
     required: true
     description: The Nitro Deploy token to use to authenticate with the Nitro Deploy API.
-  nitro_deploy_export_folder:
+  AUTO_BUILD:
+    required: false
+    default: 'false'
+    description: Whether to automatically build your project before deploying. Defaults to `false`.
+  EXPORT_FOLDER:
     required: false
     default: .output
     description: The folder to export to Nitro Deploy. Defaults to the current working directory.
-  nitro_deploy_build_command:
+  BUILD_COMMAND:
     required: false
     default: npm run build
     description: The command to run to build your project. Defaults to `npm run build`.
+  TAG:
+    required: false
+    default: github
+    description: The tag to use when pushing to Nitro Deploy. Defaults to `github`.
 
 runs:
   using: node20
