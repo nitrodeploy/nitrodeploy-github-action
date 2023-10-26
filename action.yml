@@ -3,7 +3,7 @@ description: Nitro Deploy speeds server.
 author: productdevbook <hi@productdevbook.com>
 
 branding:
-  color: orange
+  color: gray-dark
   icon: cloud-lightning
 
 inputs:
