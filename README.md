@@ -58,8 +58,9 @@ Below is an example of how to use NitroDeploy GitHub Action in your workflow.
 ```yaml
 - name: Nitro Deploy
   uses: nitrodeploy/nitrodeploy-github-action@v0.3.0
-  with:
+  env:
     NITRO_DEPLOY_TOKEN: ${{ secrets.NITRO_DEPLOY_TOKEN }}
+  with:
     BUILD_COMMAND: npm run build
     EXPORT_FOLDER: build
     TAG: production
