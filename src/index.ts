@@ -1,17 +1,26 @@
-import { getInput } from '@actions/core'
+import process from 'node:process'
+import { getInput, setFailed } from '@actions/core'
 
 import { uploadFile } from 'nitrodeploy/upload'
 
-const token = getInput('TOKEN')
-const buildCommand = getInput('BUILD_COMMAND')
-const exportFolder = getInput('EXPORT_FOLDER')
-const tag = getInput('TAG')
-const autobuild = getInput('AUTO_BUILD')
+try {
+  const token = process.env.NITRO_DEPLOY_TOKEN
+  if (!token)
+    throw new Error('NITRO_DEPLOY_TOKEN is not set. Please provide it as an environment variable.')
 
-await uploadFile({
-  token,
-  buildCommand: buildCommand || 'npm run build',
-  exportFolder: exportFolder || '.output',
-  isBuild: autobuild === 'true',
-  tag: tag || 'github',
-})
+  const buildCommand = getInput('BUILD_COMMAND') || 'npm run build'
+  const exportFolder = getInput('EXPORT_FOLDER') || '.output'
+  const tag = getInput('TAG') || 'github'
+  const autobuild = getInput('AUTO_BUILD') === 'true'
+
+  await uploadFile({
+    token,
+    buildCommand,
+    exportFolder,
+    isBuild: autobuild,
+    tag,
+  })
+}
+catch (error: any) {
+  setFailed(error.message)
+}
