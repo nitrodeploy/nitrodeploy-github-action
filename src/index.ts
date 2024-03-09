@@ -12,7 +12,7 @@ try {
   const exportFolder = getInput('EXPORT_FOLDER')
   const tag = getInput('TAG') || 'github'
   const type: 'nitro' | 'vitepress' = getInput('TYPE') as any || 'nitro'
-  const autobuild = !!getInput('AUTO_BUILD')
+  const autobuild = getInput('AUTO_BUILD') === 'true' || false
 
   await uploadFile({
     token,
