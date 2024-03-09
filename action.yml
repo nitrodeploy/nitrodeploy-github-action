@@ -7,9 +7,6 @@ branding:
   icon: cloud-lightning
 
 inputs:
-  TOKEN:
-    required: true
-    description: The Nitro Deploy token to use to authenticate with the Nitro Deploy API.
   AUTO_BUILD:
     required: false
     default: 'false'
@@ -26,6 +23,10 @@ inputs:
     required: false
     default: github
     description: The tag to use when pushing to Nitro Deploy. Defaults to `github`.
+  TYPE:
+    required: false
+    default: nitro
+    description: The type of project to deploy. Defaults to `static`.
 
 runs:
   using: node20

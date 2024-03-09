@@ -11,6 +11,7 @@ try {
   const buildCommand = getInput('BUILD_COMMAND') || 'npm run build'
   const exportFolder = getInput('EXPORT_FOLDER') || '.output'
   const tag = getInput('TAG') || 'github'
+  const type: 'nitro' | 'vitepress' = getInput('TYPE') as any || 'nitro'
   const autobuild = getInput('AUTO_BUILD') === 'true'
 
   await uploadFile({
@@ -19,6 +20,7 @@ try {
     exportFolder,
     isBuild: autobuild,
     tag,
+    type,
   })
 }
 catch (error: any) {
