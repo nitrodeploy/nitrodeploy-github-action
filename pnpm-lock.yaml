@@ -15,8 +15,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0
       nitrodeploy:
-        specifier: ^0.7.4
-        version: 0.7.4
+        specifier: ^0.7.5
+        version: 0.7.5
     devDependencies:
       '@antfu/eslint-config':
         specifier: 2.8.0
@@ -3182,8 +3182,8 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
-  /nitrodeploy@0.7.4:
-    resolution: {integrity: sha512-4gE1Tauk5kPt2EWQRUEsx0QUg6NjNcltt/6U5rWK0/br+mNoKa2Dww8KNGrlzJpFgXUhu7Pps/VktApFXKwvIA==}
+  /nitrodeploy@0.7.5:
+    resolution: {integrity: sha512-+VH/ZOr7H5FbLfOa67GYrhOn2TeJI3tf55xUUv1JHwCyBdR3cj9JyHsNgk5UE4O0ESi7qhXahnypLYui1GlfrA==}
     engines: {node: '>=20'}
     hasBin: true
     dependencies:

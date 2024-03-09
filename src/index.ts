@@ -9,10 +9,10 @@ try {
     throw new Error('NITRO_DEPLOY_TOKEN is not set. Please provide it as an environment variable.')
 
   const buildCommand = getInput('BUILD_COMMAND') || 'npm run build'
-  const exportFolder = getInput('EXPORT_FOLDER') || '.output'
+  const exportFolder = getInput('EXPORT_FOLDER')
   const tag = getInput('TAG') || 'github'
   const type: 'nitro' | 'vitepress' = getInput('TYPE') as any || 'nitro'
-  const autobuild = getInput('AUTO_BUILD') === 'true'
+  const autobuild = !!getInput('AUTO_BUILD')
 
   await uploadFile({
     token,
